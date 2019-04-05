@@ -218,7 +218,7 @@ wingUpdateButton.onclick = function() {
     player.wingUpdateCost *= 2.5;
     player.speedMultipliers *= 1.2;
     player.wingUpdates++;
-    wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " € to update your wings";
+    wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " €，更新你的機翼。";
     document.getElementById("wingUpdateAmount").innerHTML = player.wingUpdates + "/5";
   updateStatistics()
     speed = player.baseSpeed * player.speedMultipliers;
@@ -233,7 +233,7 @@ rocketUpdateButton.onclick = function() {
     player.rocketUpdateCost *= 6;
     player.speedMultipliers *= 1.5;
     player.rocketUpdates++;
-    rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " € to update your rockets";
+    rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " €，更新你的火箭。";
     document.getElementById("rocketUpdateAmount").innerHTML = player.rocketUpdates + "/5";
       speed = player.baseSpeed * player.speedMultipliers;
       speedLabel.innerHTML = speedIndicators(speed);
@@ -247,18 +247,18 @@ shipUpdateButton.onclick = function() {
     player.shipUpdateCost *= 3;
     player.baseSpeed += 0.1*(player.ships*player.shipUpdates+1);
     player.shipUpdates++;
-    shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " € to update your ship";
+    shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " €，更新你的穿。";
     document.getElementById("shipUpdateAmount").innerHTML = player.shipUpdates + "/5";
     if (player.shipUpdates !== 5) {
     shipUpdateButton.setAttribute('data-tooltip', "Adds " + Math.round(0.1*(player.ships*player.shipUpdates+1)*10)/10 + " to your base speed. Currently at " + Math.round(player.baseSpeed*10)/10)
-    } else shipUpdateButton.setAttribute('data-tooltip', "Adds 0.1 to your base speed. Currently at " + Math.round(player.baseSpeed*10)/10)
+    } else shipUpdateButton.setAttribute('data-tooltip', "在基本速度上加0.1。現在為" + Math.round(player.baseSpeed*10)/10)
     speed = player.baseSpeed * player.speedMultipliers;
       speedLabel.innerHTML = speedIndicators(speed);
   }
 };
 
 document.getElementById("hardReset").onclick = function() {
-  if(confirm("Are you sure you want to erase all your progress?")) {
+  if(confirm("你肯不肯定刪除全部進度？")) {
   	player = {
       distance: 0,
       bestDistance: 0,
