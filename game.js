@@ -324,15 +324,15 @@ document.getElementById("twinklingbtn").onclick = function() {
 var scientific = false
 document.getElementById("notationbtn").onclick = function() {
   scientific = !scientific
-  shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " € to update your ship";
-  rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " € to update your rockets";
-  wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " € to update your wings";
-  rocketButton.innerHTML = shortenCosts(player.rocketCost) + " € for " + Rockets[player.rockets] + " rocket.";
-  wingButton.innerHTML = shortenCosts(player.wingCost) + " € for " + Wings[player.wings] + " wings.";
-  shipButton.innerHTML = shortenCosts(player.shipCost) + " € for " + Ships[player.ships] + ".";
+  shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " €，更新你的船";
+  rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " €，更新你的火箭";
+  wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " €，更新你的機翼";
+  rocketButton.innerHTML = shortenCosts(player.rocketCost) + " €，獲得" + Rockets[player.rockets] + "火箭。";
+  wingButton.innerHTML = shortenCosts(player.wingCost) + " €，獲得" + Wings[player.wings] + "機翼。";
+  shipButton.innerHTML = shortenCosts(player.shipCost) + " €，獲得" + Ships[player.ships] + "。";
   updateStatistics();
-  document.getElementById("slaveryCost").innerHTML = 'Cost: ' + shortenCosts(player.slaveryCost) + ' refugees.'
-  document.getElementById("capitalismCost").innerHTML = 'Cost: ' + shortenCosts(player.capitalismCost) + ' refugees.'
+  document.getElementById("slaveryCost").innerHTML = '成本: ' + shortenCosts(player.slaveryCost) + '難民。'
+  document.getElementById("capitalismCost").innerHTML = '成本: ' + shortenCosts(player.capitalismCost) + '難民。'
   speedLabel.innerHTML = speedIndicators(speed);
 
 
