@@ -155,14 +155,14 @@ rocketButton.onclick = function() {
     player.rocketCost *= 7776;
     player.speedMultipliers *= 2;
     player.rockets++;
-    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " € for " + Rockets[player.rockets] + " rocket.";
+    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " €，獲得" + Rockets[player.rockets] + "火箭。";
     player.rocketUpdates = 0;
   }
   if (player.money >= player.rocketCost && player.rocketUpdates == 5 && !player.onAir) {
     player.money -= player.rocketCost;
     player.rocketCost *= 7776;
     player.rockets++;
-    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " € for " + Rockets[player.rockets] + " rocket.";
+    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " €，獲得" + Rockets[player.rockets] + "火箭。";
     player.rocketUpdates = 0;
     document.getElementById("rocketUpdateAmount").innerHTML = player.rocketUpdates + "/5";
   }
@@ -176,14 +176,14 @@ shipButton.onclick = function() {
     player.shipCost *= 243;
     player.baseSpeed += 0.1;
     player.ships++;
-    shipButton.innerHTML = shortenCosts(player.shipCost) + " € for " + Ships[player.ships] + ".";
+    shipButton.innerHTML = shortenCosts(player.shipCost) + " €，獲得" + Ships[player.ships] + "。";
     player.shipUpdates = 0;
   }
   if (player.money >= player.shipCost  && player.shipUpdates == 5 && !player.onAir) {
     player.money -= player.shipCost;
     player.shipCost *= 243;
     player.ships++;
-    shipButton.innerHTML = shortenCosts(player.shipCost) + " € for " + Ships[player.ships] + ".";
+    shipButton.innerHTML = shortenCosts(player.shipCost) + " €，獲得" + Ships[player.ships] + "。";
     player.shipUpdates = 0;
     document.getElementById("shipUpdateAmount").innerHTML = player.shipUpdates + "/5";
   }
@@ -197,14 +197,14 @@ wingButton.onclick = function() {
     player.wingCost *= 97.65;
     player.speedMultipliers *= 1.5;
     player.wings++;
-    wingButton.innerHTML = shortenCosts(player.wingCost) + " € for " + Wings[player.wings] + " wings.";
+    wingButton.innerHTML = shortenCosts(player.wingCost) + " €，獲得" + Wings[player.wings] + "機翼。";
     player.wingUpdates = 0;
   }
   if (player.money >= player.wingCost && player.wingUpdates == 5 && !player.onAir) {
     player.money -= player.wingCost;
     player.wingCost *= 97.65;
     player.wings++;
-    wingButton.innerHTML = shortenCosts(player.wingCost) + " € for " + Wings[player.wings] + " wings.";
+    wingButton.innerHTML = shortenCosts(player.wingCost) + " €，獲得" + Wings[player.wings] + "機翼。";
     player.wingUpdates = 0;
     document.getElementById("wingUpdateAmount").innerHTML = player.wingUpdates + "/5";
   }
