@@ -247,7 +247,7 @@ shipUpdateButton.onclick = function() {
     player.shipUpdateCost *= 3;
     player.baseSpeed += 0.1*(player.ships*player.shipUpdates+1);
     player.shipUpdates++;
-    shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " €，更新你的穿。";
+    shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " €，更新你的船。";
     document.getElementById("shipUpdateAmount").innerHTML = player.shipUpdates + "/5";
     if (player.shipUpdates !== 5) {
     shipUpdateButton.setAttribute('data-tooltip', "Adds " + Math.round(0.1*(player.ships*player.shipUpdates+1)*10)/10 + " to your base speed. Currently at " + Math.round(player.baseSpeed*10)/10)
@@ -297,20 +297,20 @@ document.getElementById("hardReset").onclick = function() {
       onAir: false,
       msgShown: true
     };
-  	shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " € to update your ship";
+  	shipUpdateButton.innerHTML = shortenCosts(player.shipUpdateCost) + " €，更新你的船";
     document.getElementById("shipUpdateAmount").innerHTML = "0/5";
-    rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " € to update your rockets";
+    rocketUpdateButton.innerHTML = shortenCosts(player.rocketUpdateCost) + " €，更新你的火箭";
     document.getElementById("rocketUpdateAmount").innerHTML = "0/5";
-    wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " € to update your wings";
+    wingUpdateButton.innerHTML = shortenCosts(player.wingUpdateCost) + " €，更新你的機翼";
     document.getElementById("wingUpdateAmount").innerHTML = "0/5";
-    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " € for " + Rockets[player.rockets] + " rocket.";
-    wingButton.innerHTML = shortenCosts(player.wingCost) + " € for " + Wings[player.wings] + " wings.";
-    shipButton.innerHTML = shortenCosts(player.shipCost) + " € for " + Ships[player.ships] + ".";
+    rocketButton.innerHTML = shortenCosts(player.rocketCost) + " €，獲得" + Rockets[player.rockets] + "火箭。";
+    wingButton.innerHTML = shortenCosts(player.wingCost) + " €，獲得" + Wings[player.wings] + "機翼。";
+    shipButton.innerHTML = shortenCosts(player.shipCost) + " €，獲得" + Ships[player.ships] + "。";
     updateAchievements();
     updateStatistics();
     document.getElementById("prestigeUpgrades").style.display = 'none'
       speed = player.baseSpeed * player.speedMultipliers;
-	  document.getElementById("prestige").innerHTML = "You have " + shortenCosts(player.prestigeAmount) + " refugees on your exoplanet."
+	  document.getElementById("prestige").innerHTML = "你在你的系外行星擁有" + shortenCosts(player.prestigeAmount) + "難民。"
   }
 };
 
